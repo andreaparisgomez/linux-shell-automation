@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# temporary files
+*.log
+*.tmp
+
+# ignore generated outputs
+weather_history.tsv
+forecast_accuracy.tsv

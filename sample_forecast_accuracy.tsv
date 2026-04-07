@@ -1,0 +1,7 @@
+date	city	obs_temp_c	fc_temp_c	error_c	accuracy_label
+2026-04-06	Casablanca	17	17	0	excellent
+2026-04-07	Casablanca	19	14	-5	poor
+2026-04-06	London	18	18	0	excellent
+2026-04-07	London	20	19	-1	excellent
+2026-04-06	Seoul	8	8	0	excellent
+2026-04-07	Seoul	4	12	8	poor
