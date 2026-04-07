@@ -14,11 +14,18 @@ tail -n +2 "$input_file" | while IFS=$'\t' read -r date city obs_temp fc_temp; d
   obs_temp_clean=$(echo "$obs_temp" | tr -d '+')
   fc_temp_clean=$(echo "$fc_temp" | tr -d '+')
 
-  # If same city as previous row, we can compare
+  # If same city as previous row, compare yesterday's forecast with today's observed temperature
   if [ "$city" = "$prev_city" ]; then
     error=$((prev_fc - obs_temp_clean))
-    abs_error=${error#-}
 
+    # Calculate absolute error
+    if [ "$error" -lt 0 ]; then
+      abs_error=$((-1 * error))
+    else
+      abs_error=$error
+    fi
+
+    # Assign accuracy label
     if [ "$abs_error" -le 1 ]; then
       label="excellent"
     elif [ "$abs_error" -le 2 ]; then
