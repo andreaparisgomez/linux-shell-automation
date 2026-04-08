@@ -6,6 +6,9 @@ This project implements a simple ETL (Extract, Transform, Load) pipeline in Bash
 
 The pipeline retrieves weather data for multiple cities, extracts the current observed temperature and the forecasted temperature for the following day at noon, and stores the results in a structured historical dataset. A second script evaluates the accuracy of the forecasts over time.
 
+A detailed write-up of this project is available here:  
+[Building an ETL Pipeline in Bash (and What I Learned)](https://andreaparisdata.hashnode.dev/building-an-etl-pipeline-in-bash-and-what-i-learned)
+
 ---
 
 ## Features
